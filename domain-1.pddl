@@ -7,6 +7,11 @@
                 weighingItem - shopItem)
 
     (:predicates
+
+        (aisle ?aisle - aisle)
+        (scale ?scale - scale)
+        (checkout ?checkout - checkout)
+
         (location ?domainItem - moveable ?location - location)
         (adjacent ?loc1 - location ?loc2 - location)
 
@@ -20,12 +25,13 @@
     (:action move
         :parameters (
             ?bot - shopBot
-            ?currentCell - aisle
-            ?nextCell - aisle
+            ?currentCell - location
+            ?nextCell - location
         )
         :precondition (and 
             (location ?bot ?currentCell)
             (adjacent ?currentCell ?nextCell)
+            (aisle ?nextCell)
         )
         
         :effect (and 
@@ -82,6 +88,7 @@
         :precondition (and 
             (holding ?bot ?item)
             (location ?bot ?botLocation)
+            (adjacent ?botlocation ?scale)
             (needsWeighing ?item)
         )
         :effect (and
@@ -93,7 +100,7 @@
     (:action checkOut
         :parameters (
             ?bot - shopBot
-            ?botLocation
+            ?botLocation - location
             ?item - shopItem
             ?checkOutDesk - checkout
         )
