@@ -14,18 +14,30 @@
         (armsEmpty robot)
 
         (location iceLolly right1)
+        (not(checkedOut iceLolly))
+
         (location pizza right2)
+        (not(checkedOut pizza))
+
         (location toothpaste right3)
+        (not(checkedOut toothpaste))
+
         (location shampoo right4)
+        (not(checkedOut shampoo))
 
         (location cabbage left1)
         (needsWeighing cabbage)
+        (not(checkedOut cabbage))
 
         (location potato left2)
         (needsWeighing potato)
+        (not(checkedOut potato))
 
         (location bread left3)
+        (not(checkedOut bread))
+        
         (location ketchup left4)
+        (not(checkedOut ketchup))
 
         (adjacent cell1 cell2)
         (adjacent cell1 scale)

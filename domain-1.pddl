@@ -38,7 +38,7 @@
     (:action pickUp
         :parameters(
             ?bot - shopBot
-            ?botLocation - location
+            ?botLocation - aisle
             ?item - shopItem
             ?itemLocation - location
         )
@@ -58,7 +58,7 @@
     (:action drop
         :parameters (
             ?bot - shopBot
-            ?botLocation - location
+            ?botLocation - aisle
             ?item - shopItem
             ?location - location
         )
@@ -77,7 +77,7 @@
     (:action weigh
         :parameters (
             ?bot - shopBot
-            ?botLocation - location
+            ?botLocation - aisle
             ?item - shopItem
             ?scale - scale
         )
@@ -96,7 +96,7 @@
     (:action checkOut
         :parameters (
             ?bot - shopBot
-            ?botLocation - location
+            ?botLocation - aisle
             ?item - shopItem
             ?checkOutDesk - checkout
         )
