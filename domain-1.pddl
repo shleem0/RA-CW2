@@ -4,10 +4,9 @@
         (:types location moveable - object
                 aisle shelf scale checkout - location
                 shopBot shopItem - moveable
-                weighingItem - shopItem)
+        )
 
     (:predicates
-
         (aisle ?aisle - aisle)
         (scale ?scale - scale)
         (checkout ?checkout - checkout)
@@ -18,7 +17,7 @@
         (holding ?bot - shopBot ?item - shopItem)
         (armsEmpty ?bot - shopBot)
 
-        (needsWeighing ?item - weighingItem)
+        (needsWeighing ?item - shopItem)
         (checkedOut ?item - shopItem)
     )
 
@@ -82,7 +81,7 @@
         :parameters (
             ?bot - shopBot
             ?botLocation - location
-            ?item - weighingItem
+            ?item - shopItem
             ?scale - scale
         )
         :precondition (and 
