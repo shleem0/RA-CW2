@@ -28,7 +28,6 @@
         :precondition (and 
             (location ?bot ?currentCell)
             (adjacent ?currentCell ?nextCell)
-            (aisle ?nextCell)
         )
         
         :effect (and 
