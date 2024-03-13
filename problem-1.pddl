@@ -2,8 +2,7 @@
     (:domain shoppEdWorld)
     (:objects
         robot - shopBot
-        iceLolly pizza toothpaste shampoo bread ketchup - shopItem
-        cabbage potato - weighingItem
+        iceLolly pizza toothpaste shampoo bread ketchup cabbage potato - shopItem
         cell1 cell2 cell3 cell4 cell5 cell6 cell7 cell8 cell9 cell10 cell11 cell12 cell13 cell14 cell15 cell16 cell17 cell18 cell19 cell20 - aisle
         left1 left2 left3 left4 right1 right2 right3 right4 - shelf
         scale - scale
