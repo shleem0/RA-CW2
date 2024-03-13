@@ -8,6 +8,10 @@
 
     (:predicates
 
+        (AISLE ?obj)
+        (SCALE ?obj)
+        (CHECKOUT ?obj)
+        (ITEM ?obj)
 
         (location ?domainItem - moveable ?location - location)
         (adjacent ?loc1 - location ?loc2 - location)
@@ -28,9 +32,11 @@
         :precondition (and 
             (location ?bot ?currentCell)
             (adjacent ?currentCell ?nextCell)
+            (AISLE ?currentCell)
+            (AISLE ?nextCell)
         )
         
-        :effect (and 
+        :effect (and
             (location ?bot ?nextCell)  
         )
     )
@@ -47,6 +53,8 @@
             (location ?item ?itemLocation)
             (adjacent ?botLocation ?itemlocation)
             (armsEmpty ?bot)
+            (ITEM ?item)
+
         )
         :effect (and 
             (not(armsEmpty ?bot))
