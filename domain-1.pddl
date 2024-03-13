@@ -7,9 +7,7 @@
         )
 
     (:predicates
-        (aisle ?aisle - aisle)
-        (scale ?scale - scale)
-        (checkout ?checkout - checkout)
+
 
         (location ?domainItem - moveable ?location - location)
         (adjacent ?loc1 - location ?loc2 - location)
@@ -24,8 +22,8 @@
     (:action move
         :parameters (
             ?bot - shopBot
-            ?currentCell - location
-            ?nextCell - location
+            ?currentCell - aisle
+            ?nextCell - aisle
         )
         :precondition (and 
             (location ?bot ?currentCell)
